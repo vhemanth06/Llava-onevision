@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+llava/
+
+# Hugging Face cache
+~/.cache/huggingface
+
+# Dataset downloads
+data/
+*.zip
+*.tar.gz
+
+# Results / logs
+results/
+*.log
