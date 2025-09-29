@@ -59,9 +59,9 @@ llava_onevision_assignment/
 
 1. Place a video file in the repo folder or provide a path.  
 2. Run the script:
-
-python video_test_llava.py
-
+```bash
+python3 video_test_llava.py
+```
 3. The script will:  
 
 - Extract a specific frame from the video  
@@ -100,8 +100,10 @@ python video_test_llava.py
 For a turnkey setup on a cloud GPU:
 
 # Clone repo
+```bash
 git clone https://github.com/vhemanth06/Llava-onevision.git
 cd Llava-onevision
+```
 
 # Setup environment
 ```bash
