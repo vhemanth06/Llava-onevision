@@ -34,9 +34,10 @@ llava_onevision_assignment/
 **Python 3.10, PyTorch, Hugging Face Transformers**
 
 1. Run the setup script:
-
-bash setup_env.sh
-
+   ```bash
+   chmod +X setup_env.sh
+   ./setup_env.sh
+   ```
 2. Activate the conda environment:
 
 conda activate llava
