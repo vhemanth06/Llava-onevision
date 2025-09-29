@@ -35,17 +35,18 @@ llava_onevision_assignment/
 
 1. Run the setup script:
    ```bash
-   chmod +X setup_env.sh
-   ./setup_env.sh
+   bash setup_env.sh
    ```
 2. Activate the conda environment:
-
-conda activate llava
+   ```bash
+   conda activate llava
+   ```
 
 3. Log in to Hugging Face via Bash:
-
-pip install --upgrade huggingface_hub
-huggingface-cli login
+   ```bash
+   pip install --upgrade huggingface_hub
+   huggingface-cli login
+   ```
 
 - Paste your **Personal Access Token (PAT)** from https://huggingface.co/settings/tokens when prompted.
 
@@ -90,7 +91,7 @@ python video_test_llava.py
 ---
 
 **Author:** Vuppula Hemanth Reddy  
-**Date:** 2025
+**Date:** 2025-09-29
 
 ---
 
@@ -103,12 +104,18 @@ git clone https://github.com/vhemanth06/Llava-onevision.git
 cd Llava-onevision
 
 # Setup environment
+```bash
 bash setup_env.sh
 conda activate llava
+```
 
 # Login to Hugging Face
+```bash
 pip install --upgrade huggingface_hub
 huggingface-cli login
+```
 
 # Run a test video frame inference
-python video_test_llava.py
+```bash
+python3 video_test_llava.py
+```
