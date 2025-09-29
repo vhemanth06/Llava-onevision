@@ -14,7 +14,7 @@ The goal is to replicate the model’s inference results and save outputs for an
 ---
 
 ## Folder Structure
-
+```markdown
 llava_onevision_assignment/
 ├── llava_onevision/            # All LLaVA scripts
 │   ├── test_llava_onevision.py   # Inference script (image/video)
@@ -26,7 +26,7 @@ llava_onevision_assignment/
 │   └── video_frame_output.json
 ├── .gitignore                   # Ignore results, cache, env
 └── README.md                    # This file
-
+```
 ---
 
 ## Environment Setup
