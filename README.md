@@ -99,25 +99,25 @@ python3 video_test_llava.py
 
 For a turnkey setup on a cloud GPU:
 
-# Clone repo
+### Clone repo
 ```bash
 git clone https://github.com/vhemanth06/Llava-onevision.git
 cd Llava-onevision
 ```
 
-# Setup environment
+### Setup environment
 ```bash
 bash setup_env.sh
 conda activate llava
 ```
 
-# Login to Hugging Face
+### Login to Hugging Face
 ```bash
 pip install --upgrade huggingface_hub
 huggingface-cli login
 ```
 
-# Run a test video frame inference
+### Run a test video frame inference
 ```bash
 python3 video_test_llava.py
 ```
