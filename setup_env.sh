@@ -7,7 +7,7 @@ conda activate llava
 pip install --upgrade pip
 
 # 3) Install PyTorch (adjust CUDA version if needed)
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # 4) Install LLaVA / Hugging Face packages
 pip install -U "transformers>=4.45.0" accelerate huggingface_hub
