@@ -1,0 +1,147 @@
+Processing video: test_order_62.mp4
+Predicted: 1->2->3->4
+Ground Truth: 2->1->4->3
+--------------------------------------------------
+Processing video: test_order_31.mp4
+Predicted: riding mule --> carving pumpkin --> pole vault --> baking cookies
+Ground Truth: baking cookies --> carving pumpkin --> riding mule --> pole vault
+--------------------------------------------------
+Processing video: test_order_44.mp4
+Predicted: cleaning toilet --> paragliding --> baking cookies --> shredding paper
+Ground Truth: shredding paper --> baking cookies --> paragliding --> cleaning toilet
+--------------------------------------------------
+Processing video: test_order_7.mp4
+Predicted: carving pumpkin --> milking cow --> shredding paper --> jetskiing
+Ground Truth: milking cow --> jetskiing --> carving pumpkin --> shredding paper
+--------------------------------------------------
+Processing video: test_order_51.mp4
+Predicted: 1->2->3->4
+Ground Truth: 1->2->3->4
+--------------------------------------------------
+Processing video: test_order_69.mp4
+Predicted: 1->4->3->2
+Ground Truth: 1->4->3->2
+--------------------------------------------------
+Processing video: test_order_25.mp4
+Predicted: pole vault --> stomping grapes --> jetskiing --> tossing coin
+Ground Truth: stomping grapes --> pole vault --> tossing coin --> jetskiing
+--------------------------------------------------
+Processing video: test_order_36.mp4
+Predicted: carving pumpkin --> water sliding --> stomping grapes --> zumba
+Ground Truth: stomping grapes --> zumba --> carving pumpkin --> water sliding
+--------------------------------------------------
+Processing video: test_order_3.mp4
+Predicted: making jewelry --> riding mule --> carving pumpkin --> stomping grapes
+Ground Truth: stomping grapes --> carving pumpkin --> making jewelry --> riding mule
+--------------------------------------------------
+Processing video: test_order_41.mp4
+Predicted: stomping grapes --> clean and jerk --> carving pumpkin --> water sliding
+Ground Truth: carving pumpkin --> stomping grapes --> water sliding --> clean and jerk
+--------------------------------------------------
+Processing video: test_order_9.mp4
+Predicted: tossing coin --> playing harp --> carving pumpkin --> shredding paper
+Ground Truth: tossing coin --> playing harp --> carving pumpkin --> shredding paper
+--------------------------------------------------
+Processing video: test_order_1.mp4
+Predicted: water sliding --> cleaning toilet --> clean and jerk --> stomping grapes
+Ground Truth: stomping grapes --> clean and jerk --> cleaning toilet --> water sliding
+--------------------------------------------------
+Processing video: test_order_34.mp4
+Predicted: jetskiing --> paragliding --> playing trombone --> riding mule
+Ground Truth: jetskiing --> paragliding --> playing trombone --> riding mule
+--------------------------------------------------
+Processing video: test_order_60.mp4
+Predicted: 3->4->1->2
+Ground Truth: 2->1->4->3
+--------------------------------------------------
+Processing video: test_order_43.mp4
+Predicted: zumba --> riding mule --> clean and jerk --> water sliding
+Ground Truth: zumba --> clean and jerk --> riding mule --> water sliding
+--------------------------------------------------
+Processing video: test_order_26.mp4
+Predicted: paragliding --> carving pumpkin --> water sliding --> abseiling
+Ground Truth: abseiling --> carving pumpkin --> water sliding --> paragliding
+--------------------------------------------------
+Processing video: test_order_59.mp4
+Predicted: 2->4->1->3
+Ground Truth: 2->1->4->3
+--------------------------------------------------
+Processing video: test_order_66.mp4
+Predicted: 4->3->1->2
+Ground Truth: 2->4->1->3
+--------------------------------------------------
+Processing video: test_order_24.mp4
+Predicted: clean and jerk --> playing trombone --> abseiling --> riding mule
+Ground Truth: playing trombone --> riding mule --> clean and jerk --> abseiling
+--------------------------------------------------
+Processing video: test_order_47.mp4
+Predicted: riding mule --> cleaning toilet --> javelin throw --> baking cookies
+Ground Truth: javelin throw --> riding mule --> cleaning toilet --> baking cookies
+--------------------------------------------------
+Processing video: test_order_21.mp4
+Predicted: clean and jerk --> playing harp --> cooking sausages --> baking cookies
+Ground Truth: playing harp --> baking cookies --> clean and jerk --> cooking sausages
+--------------------------------------------------
+Processing video: test_order_50.mp4
+Predicted: 2->1->3->4
+Ground Truth: 3->4->1->2
+--------------------------------------------------
+Processing video: test_order_27.mp4
+Predicted: water sliding --> stomping grapes --> baking cookies --> cooking sausages
+Ground Truth: cooking sausages --> water sliding --> stomping grapes --> baking cookies
+--------------------------------------------------
+Processing video: test_order_38.mp4
+Predicted: javelin throw --> cooking sausages --> stomping grapes --> riding mule
+Ground Truth: javelin throw --> cooking sausages --> riding mule --> stomping grapes
+--------------------------------------------------
+Processing video: test_order_49.mp4
+Predicted: jetskiing --> abseiling --> playing trombone --> stomping grapes
+Ground Truth: jetskiing --> abseiling --> playing trombone --> stomping grapes
+--------------------------------------------------
+Processing video: test_order_0.mp4
+Predicted: tossing coin --> cleaning toilet --> milking cow --> clean and jerk
+Ground Truth: clean and jerk --> cleaning toilet --> tossing coin --> milking cow
+--------------------------------------------------
+Processing video: test_order_28.mp4
+Predicted: stomping grapes --> water sliding --> cleaning toilet --> making jewelry
+Ground Truth: making jewelry --> stomping grapes --> water sliding --> cleaning toilet
+--------------------------------------------------
+Processing video: test_order_14.mp4
+Predicted: cooking sausages --> jetskiing --> riding mule --> water sliding
+Ground Truth: cooking sausages --> jetskiing --> riding mule --> water sliding
+--------------------------------------------------
+Processing video: test_order_16.mp4
+Predicted: tossing coin --> zumba --> making jewelry --> cooking sausages
+Ground Truth: cooking sausages --> zumba --> making jewelry --> tossing coin
+--------------------------------------------------
+Processing video: test_order_42.mp4
+Predicted: cleaning toilet --> jetskiing --> making jewelry --> playing trombone
+Ground Truth: playing trombone --> jetskiing --> cleaning toilet --> making jewelry
+--------------------------------------------------
+Processing video: test_order_63.mp4
+Predicted: 1->2->3->4
+Ground Truth: 1->2->3->4
+--------------------------------------------------
+Processing video: test_order_45.mp4
+Predicted: tossing coin --> water sliding --> clean and jerk --> carving pumpkin
+Ground Truth: carving pumpkin --> tossing coin --> water sliding --> clean and jerk
+--------------------------------------------------
+Processing video: test_order_12.mp4
+Predicted: riding mule --> shredding paper --> zumba --> playing trombone
+Ground Truth: shredding paper --> zumba --> playing trombone --> riding mule
+--------------------------------------------------
+Processing video: test_order_6.mp4
+Predicted: pole vault --> playing harp --> tossing coin --> milking cow
+Ground Truth: tossing coin --> milking cow --> playing harp --> pole vault
+--------------------------------------------------
+Processing video: test_order_15.mp4
+Predicted: water sliding --> shredding paper --> stomping grapes --> riding mule
+Ground Truth: stomping grapes --> water sliding --> riding mule --> shredding paper
+--------------------------------------------------
+Processing video: test_order_2.mp4
+Predicted: javelin throw --> cleaning toilet --> jetskiing --> pole vault
+Ground Truth: jetskiing --> cleaning toilet --> javelin throw --> pole vault
+--------------------------------------------------
+Processing video: test_order_23.mp4
+Predicted: making jewelry --> paragliding --> water sliding --> playing harp
+Ground Truth: making jewelry --> paragliding --> water sliding --> playing harp
