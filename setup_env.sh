@@ -12,4 +12,4 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 # 4) Install LLaVA / Hugging Face packages
 pip install -U "transformers>=4.40.0" accelerate huggingface_hub
 pip install git+https://github.com/LLaVA-VL/LLaVA-NeXT.git
-pip install git+https://github.com/EvolvingLMMs-Lab/lmms-eval.git
+# pip install git+https://github.com/EvolvingLMMs-Lab/lmms-eval.git
