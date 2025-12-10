@@ -31,7 +31,7 @@ parser.add_argument(
 parser.add_argument(
     "--max_frames",
     type=int,
-    default=8,
+    default=32,
     help="Number of frames to sample from each video (e.g., 8, 16, 32, 64)"
 )
 
@@ -49,8 +49,8 @@ args = parser.parse_args()
 ##########################
 # model and dataset paths
 ##########################
-json_path = "/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
-dataset_path = "/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
+json_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
+dataset_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
 
 # Map model size 
 model_map = {
@@ -114,7 +114,7 @@ def generate_answer(video_path, question, candidates, max_frames=args.max_frames
     {question.strip()}
     
     Answer Choices:
-    {"\n".join(candidates)}
+    {chr(10).join(candidates)}
     
     Task:Choose the single best answer from the list above.
     Your output must contain only the exact text of the selected answer — no punctuation, no explanation, and no additional words.

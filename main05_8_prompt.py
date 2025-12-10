@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
-json_path="/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
-dataset_path="/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
+json_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
+dataset_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
 
 with open(json_path, "r") as f:
     dataset = json.load(f)
@@ -41,7 +41,7 @@ def load_video(video_path, max_frames_num=16):
     frames = vr.get_batch(uniform_sampled_frames.tolist()).asnumpy()
     return frames  # (frames, height, width, channels)
 
-def generate_answer(video_path, question, candidates, max_frames=32):
+def generate_answer(video_path, question, candidates, max_frames=8):
     video_frames = load_video(video_path, max_frames)
     frames_tensor = image_processor.preprocess(video_frames, return_tensors="pt")["pixel_values"].half().cuda()
     image_tensors = [frames_tensor]
@@ -58,22 +58,19 @@ def generate_answer(video_path, question, candidates, max_frames=32):
     """
     
     my_prompt2 =f"""
-You are given a question and a list of answer choices.
-Read the question carefully and select only one answer that is most accurate and logically correct.
+    You are given a question and a list of answer choices.
+    Read the question carefully and select only one answer that is most accurate and logically correct.
+    Input:
+    Question:
+    {question.strip()}
 
-Input:
+    Answer Choices:
+    {chr(10).join(candidates)}
 
-Question:
-{question.strip()}
+    Task:
 
-Answer Choices:
-{"\n".join(candidates)}
-
-Task:
-
-Choose the single best answer from the list above.
-Your output must contain only the exact text of the selected answer — no punctuation, no explanation, and no additional words.
-"""
+    Choose the single best answer from the list above.
+    Your output must contain only the exact text of the selected answer — no punctuation, no explanation, and no additional words."""
 
 
     conv_template = "qwen_1_5"
@@ -121,6 +118,7 @@ with open(output_file, "w", encoding="utf-8") as f:
 
         print(f"Processing video: {video_file}")
         print(f"Processing video: {video_file}", file=f)
+        
         predicted_answer = generate_answer(video_path, item["question"], item["candidates"])
         print(f"Predicted: {predicted_answer}", file=f)
         # print(f"Candidates: {item['candidates']}")
@@ -133,6 +131,7 @@ with open(output_file, "w", encoding="utf-8") as f:
 
         print("-" * 37)
         print("-" * 50, file=f)
+        # break
 
         if predicted_answer == item["answer"]:
             correct += 1

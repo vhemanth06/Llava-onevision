@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
-json_path="/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
-dataset_path="/DATA1/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
+json_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/test-ground-truth/test_mcq_gt.json"
+dataset_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_order"
 
 with open(json_path, "r") as f:
     dataset = json.load(f)
@@ -58,22 +58,19 @@ def generate_answer(video_path, question, candidates, max_frames=32):
     """
     
     my_prompt2 =f"""
-You are given a question and a list of answer choices.
-Read the question carefully and select only one answer that is most accurate and logically correct.
+    You are given a question and a list of answer choices.
+    Read the question carefully and select only one answer that is most accurate and logically correct.
+    Input:
+    Question:
+    {question.strip()}
 
-Input:
+    Answer Choices:
+    {chr(10).join(candidates)}
 
-Question:
-{question.strip()}
+    Task:
 
-Answer Choices:
-{"\n".join(candidates)}
-
-Task:
-
-Choose the single best answer from the list above.
-Your output must contain only the exact text of the selected answer — no punctuation, no explanation, and no additional words.
-"""
+    Choose the single best answer from the list above.
+    Your output must contain only the exact text of the selected answer — no punctuation, no explanation, and no additional words."""
 
 
     conv_template = "qwen_1_5"
@@ -110,7 +107,7 @@ def optionchecker(candidates, answer):
     return -1
 
 output_folder = os.path.join(os.getcwd(), "results")
-output_file = os.path.join(output_folder, "output_72_32_prompt.txt")
+output_file = os.path.join(output_folder, "output_72_32_my_prompt.txt")
 
 correct = 0
 freq=np.array([0]*6)
@@ -120,19 +117,20 @@ with open(output_file, "w", encoding="utf-8") as f:
         video_path = os.path.join(dataset_path, video_file)
 
         print(f"Processing video: {video_file}")
-        #print(f"Processing video: {video_file}", file=f)
+        print(f"Processing video: {video_file}", file=f)
         predicted_answer = generate_answer(video_path, item["question"], item["candidates"])
-        #print(f"Predicted: {predicted_answer}", file=f)
-        # print(f"Candidates: {item['candidates']}")
-        
+        print(f"Predicted: {predicted_answer}", file=f)
         print(f"Predicted: {predicted_answer}")
+        
+        # print(f"Candidates: {item['candidates']}")
         freq[optionchecker(item['candidates'],predicted_answer)-1]+=1
         # print(f"option: {optionchecker(item['candidates'],predicted_answer)}")
-        #print(f"Ground Truth: {item['answer']}", file=f)
+        print(f"Ground Truth: {item['answer']}", file=f)
         print(f"Ground Truth: {item['answer']}")
 
         print("-" * 37)
-        #print("-" * 50, file=f)
+        print("-" * 50, file=f)
+        # break
 
         if predicted_answer == item["answer"]:
             correct += 1
@@ -147,7 +145,7 @@ plt.bar(['1','2','3','4','5','6'],freq)
 plt.xlabel('Options')
 plt.ylabel('Frequency')
 plt.title('Frequency of Selected Options')
-plt.savefig(os.path.join(output_folder, 'option_freq72_32_prompt.jpg'))
+plt.savefig(os.path.join(output_folder, 'option_freq72_32_my_prompt.jpg'))
 plt.show()
 
 
