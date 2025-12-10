@@ -12,7 +12,7 @@
 
 ## Project Overview
 
-This project implements and evaluates the **LLaVA-OneVision** multimodal model on the **MLVU (Multi-Task LOng Video Understanding)** dataset, specifically for the **Action Ordering** task. The model is tested across multiple configurations including different model sizes, frame sampling strategies, and prompt formats.
+This project implements and evaluates the **LLaVA-OneVision** multimodal model on the **MLVU (Multi-Task Long Video Understanding)** dataset, specifically for the **Action Ordering** task. The model is tested across multiple configurations including different model sizes, frame sampling strategies, and prompt formats.
 
 ### Dataset Information
 - **Dataset**: MLVU Action Order (`test_mcq_gt.json`)
@@ -298,12 +298,10 @@ Processing video: test_order_31.mp4
 Predicted: baking cookies --> carving pumpkin --> riding mule --> pole vault
 Ground Truth: baking cookies --> carving pumpkin --> riding mule --> pole vault
 --------------------------------------------------
-
 Processing video: test_order_36.mp4
 Predicted: stomping grapes --> zumba --> carving pumpkin --> water sliding
 Ground Truth: stomping grapes --> zumba --> carving pumpkin --> water sliding
 --------------------------------------------------
-
 Processing video: test_order_3.mp4
 Predicted: stomping grapes --> carving pumpkin --> making jewelry --> riding mule
 Ground Truth: stomping grapes --> carving pumpkin --> making jewelry --> riding mule
@@ -440,9 +438,3 @@ This report documents a comprehensive evaluation of LLaVA-OneVision for video un
 4. **Evaluation**: Systematic accuracy measurement and option distribution analysis
 
 The results provide insights into model performance across different configurations and can inform future work on video understanding tasks.
-
----
-
-**Report Generated**: December 2025  
-**Project**: LLaVA-OneVision MLVU Action Ordering Evaluation  
-**Repository**: https://github.com/LLaVA-VL/LLaVA-NeXT
