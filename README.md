@@ -33,11 +33,12 @@ Llava-onevision/
 ├── single_runner.py                    # Primary inference script (configurable, modular)
 ├── main72.py                           # Specialized 72B model inference (legacy)
 ├── gt_plot.py                          # Ground truth distribution visualization
-├── test_llava_onevision.py            # HuggingFace pipeline test (deprecated)
+├── test_llava_onevision.py             # HuggingFace pipeline test (deprecated)
 ├── setup_env.sh                        # Environment setup script
 ├── REPORT.md                           # Comprehensive project report
+├── jobs.mp4                            # A sample video file being testeed upon
 ├── README.md                           # This file
-├── LLaVA_OneVision_Tutorials.ipynb    # Official LLaVA-NeXT tutorial examples
+├── LLaVA_OneVision_Tutorials.ipynb     # Official LLaVA-NeXT tutorial examples
 ├── complete.json                       # Full MLVU dataset (70 action ordering samples)
 ├── content.json                        # Subset of MLVU dataset (12 action ordering samples)
 ├── results/                            # Outputs from scripts (ignored by Git)

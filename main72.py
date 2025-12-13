@@ -1,4 +1,4 @@
-
+﻿
 import os
 import json
 import torch
@@ -20,14 +20,14 @@ dataset_path = "/DATA2/ai23mtech12002/DATASETS/MLVU/MLVU_Test/MLVU_Test/Action_o
 
 with open(json_path, "r") as f:
     dataset = json.load(f)
-    
+
 dataset = [item for item in dataset if item.get("question_type") == "order"]
-    
+
 pretrained = "lmms-lab/llava-onevision-qwen2-72b-ov"
 model_name = "llava_qwen"
 device_map = "auto"
 device = "cuda"
-llava_model_args = {"multimodal": True} 
+llava_model_args = {"multimodal": True}
 
 tokenizer, model, image_processor, max_length = load_pretrained_model(
     pretrained, None, model_name, device_map=device_map, attn_implementation="sdpa", **llava_model_args
@@ -45,18 +45,18 @@ def generate_answer(video_path, question, candidates, max_frames=32):
     video_frames = load_video(video_path, max_frames)
     frames_tensor = image_processor.preprocess(video_frames, return_tensors="pt")["pixel_values"].half().cuda()
     image_tensors = [frames_tensor]
-    
+
     my_prompt =f"""
     You are given a question and a list of possible answers (candidates).
     Question:
     {question.strip()}
-    
+
     Candidates:
     {chr(10).join(f"- {c}" for c in candidates)}
     Your task: Choose the single candidate that correctly answers the question.
     Return only the exact text of that chosen candidate - nothing else (no punctuation, no explanation).
     """
-    
+
     my_prompt2 =f"""
     You are given a question and a list of answer choices.
     Read the question carefully and select only one answer that is most accurate and logically correct.
@@ -121,7 +121,7 @@ with open(output_file, "w", encoding="utf-8") as f:
         predicted_answer = generate_answer(video_path, item["question"], item["candidates"])
         print(f"Predicted: {predicted_answer}", file=f)
         print(f"Predicted: {predicted_answer}")
-        
+
         # print(f"Candidates: {item['candidates']}")
         freq[optionchecker(item['candidates'],predicted_answer)-1]+=1
         # print(f"option: {optionchecker(item['candidates'],predicted_answer)}")
@@ -134,7 +134,7 @@ with open(output_file, "w", encoding="utf-8") as f:
 
         if predicted_answer == item["answer"]:
             correct += 1
-            
+
         # if correct >2:
         #     break
 
