@@ -1,6 +1,6 @@
 # LLaVA-OneVision MLVU Action Ordering Evaluation
 
-This repository contains code and comprehensive evaluation of the **LLaVA-OneVision** multimodal model for the **MLVU (Multi-Task Long Video Understanding)** test dataset, specifically focused on the **Action Ordering** task.
+This repository contains code and a comprehensive evaluation of the **LLaVA-OneVision** multimodal model for the **MLVU (Multi-Task Long Video Understanding)** test dataset, specifically focused on the **Action Ordering** task.
 
 ## Project Overview
 
@@ -10,7 +10,7 @@ The project evaluates LLaVA-OneVision's ability to predict the correct chronolog
 - **Three prompt engineering approaches**: detailed, optimized, and minimal
 - **Comprehensive result logging and analysis**: per-video predictions, accuracy metrics, and option distribution charts
 
-For detailed technical documentation, see **[REPORT.md](REPORT.md)** which explains model loading, prompting strategy, implementation details, and results analysis.
+For detailed technical documentation, see **[REPORT.md](REPORT.md)**, which explains model loading, prompting strategy, implementation details, and results analysis.
 
 ---
 
@@ -31,21 +31,21 @@ For detailed technical documentation, see **[REPORT.md](REPORT.md)** which expla
 ```markdown
 Llava-onevision/
 ├── single_runner.py                    # Primary inference script (configurable, modular)
-├── main72.py                           # Specialized 72B model inference (legacy)
-├── gt_plot.py                          # Ground truth distribution visualization
+├── main72.py                           # Specialised 72B model inference (legacy)
+├── gt_plot.py                          # Ground truth distribution visualisation
 ├── test_llava_onevision.py             # HuggingFace pipeline test (deprecated)
 ├── setup_env.sh                        # Environment setup script
 ├── REPORT.md                           # Comprehensive project report
-├── jobs.mp4                            # A sample video file being testeed upon
+├── jobs.mp4                            # A sample video file being tested upon
 ├── README.md                           # This file
 ├── LLaVA_OneVision_Tutorials.ipynb     # Official LLaVA-NeXT tutorial examples
 ├── complete.json                       # Full MLVU dataset (70 action ordering samples)
 ├── content.json                        # Subset of MLVU dataset (12 action ordering samples)
-├── results/                            # Outputs from scripts (ignored by Git)
+├── results/                            # Outputs from scripts
 │   ├── output_*.txt                    # Per-video predictions and accuracy
 │   ├── option_freq*.jpg                # Option distribution charts
 │   └── gt_freq.jpg                     # Ground truth distribution
-└── .gitignore                          # Ignore results, cache, env
+└── .gitignore                          # Ignore logs, cache, env
 ```
 
 ---
@@ -65,7 +65,7 @@ This will create a Python 3.10 conda environment with all required dependencies:
 - LLaVA-NeXT
 - lmms-eval
 - decord (video processing)
-- matplotlib (visualization)
+- matplotlib (visualisation)
 
 ### 2. Activate the conda environment
 
@@ -73,7 +73,7 @@ This will create a Python 3.10 conda environment with all required dependencies:
 conda activate llava
 ```
 
-### 3. Login to Hugging Face
+### 3. Log in to Hugging Face
 
 ```bash
 pip install --upgrade huggingface_hub
@@ -256,7 +256,7 @@ A: Modify the `json_path` and `dataset_path` variables in `single_runner.py` to 
 A: Yes! The pipeline is generalizable. Modify the prompts and answer matching logic for your specific task.
 
 **Q: Out of memory errors?**  
-A: Try using a smaller model, fewer frames, or reduce `max_new_tokens` in the model.generate() call.
+A: Try using a smaller model, fewer frames, or reducing `max_new_tokens` in the model.generate() call.
 
 ---
 
